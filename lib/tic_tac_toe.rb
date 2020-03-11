@@ -25,11 +25,11 @@ class TicTacToe
     return @board[index]="X"||@board[index]="O"
   end
 
-  def valid_move?(board,index)
-    return index.between?(0,8) && !(position_taken?(board,index))
+  def valid_move?(index)
+    return index.between?(0,8) && !(position_taken?(index))
   end
 
-  def turn(board)
+  def turn
   puts "Please enter 1-9:"
   input=gets.chomp
   index=input_to_index(input)
