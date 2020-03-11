@@ -83,8 +83,8 @@ def over?
   return draw? || won?
 end
 
-def winner(board)
-  if won?(board)
+def winner
+  if won?
     return board[won?(board)[0]]
   else
     return nil
