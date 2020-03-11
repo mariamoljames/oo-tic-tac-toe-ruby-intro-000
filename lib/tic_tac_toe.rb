@@ -71,12 +71,12 @@ def won?
   end
 end
 
-def full?(board)
-  return board.all? { |item| item=="X"||item=="O" }
+def full?
+  return @board.all? { |item| item=="X"||item=="O" }
 end
 
-def draw?(board)
-  return full?(board) && !won?(board)
+def draw?
+  return full? && !won?
 end
 
 def over?(board)
