@@ -26,6 +26,7 @@ class TicTacToe
       return true
     else
       return false
+    end
   end
 
   def valid_move?(index)
