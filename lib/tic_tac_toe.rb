@@ -60,10 +60,10 @@ def current_player
   end
 end
 
-def won?(board)
-  if !board.none? { |item| item=="X"||item=="O" }
+def won?
+  if !@board.none? { |item| item=="X"||item=="O" }
     WIN_COMBINATIONS.each do |win_combination|
-      if [board[win_combination[0]],board[win_combination[1]],board[win_combination[2]]].all?{ |item| item=="X"||item=="O" } && board[win_combination[0]]==board[win_combination[1]] && board[win_combination[1]]==board[win_combination[2]]
+      if [@board[win_combination[0]],@board[win_combination[1]],@board[win_combination[2]]].all?{ |item| item=="X"||item=="O" } && @board[win_combination[0]]==@board[win_combination[1]] && @board[win_combination[1]]==@board[win_combination[2]]
         return win_combination
       end
     end
